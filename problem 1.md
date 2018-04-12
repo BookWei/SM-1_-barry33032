@@ -1,6 +1,6 @@
-1.
+Q1
 mean = (1 + sides)/2 variance = (sides^2) - 1)/12 standard deviation = (variance)(1/2)
-2.&3.
+Q2 Q3 Q4
 number of side 6
 
 number of trial = 10

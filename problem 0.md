@@ -1,26 +1,73 @@
-Q1~Q3
-number of trial = 10
-histogram = {1 , 3 , 3 , 1 , 2 , 0}
-frequency = {0.1 , 0.3 , 0.3 , 0.1 , 0.2 , 0}
-deviation = {-0.0666667 , 0.133333 , 0.133333 , -0.0666667 , 0.0333333 , -0.166667}
-number of trial = 100
-histogram = {17 , 20 , 18 , 20 , 14 , 11}
-frequency = {0.17 , 0.2 , 0.18 , 0.2 , 0.14 , 0.11}
-deviation = {0.00333333 , 0.0333333 , 0.0133333 , 0.0333333 , -0.0266667 , -0.0566667}
-number of trial = 1000
-histogram = {159 , 180 , 171 , 172 , 167 , 151}
-frequency = {0.159 , 0.18 , 0.171 , 0.172 , 0.167 , 0.151}
-deviation = {-0.00766667 , 0.0133333 , 0.00433333 , 0.00533333 , 0.000333333 , -0.0156667}
-number of trial = 10000
-histogram = {1684 , 1591 , 1673 , 1675 , 1647 , 1730}
-frequency = {0.1684 , 0.1591 , 0.1673 , 0.1675 , 0.1647 , 0.173}
-deviation = {0.00173333 , -0.00756667 , 0.000633333 , 0.000833333 , -0.00196667 , 0.00633333}
-number of trial = 100000
-histogram = {16760 , 16694 , 16626 , 16610 , 16677 , 16633}
-frequency = {0.1676 , 0.16694 , 0.16626 , 0.1661 , 0.16677 , 0.16633}
-deviation = {0.000933333 , 0.000273333 , -0.000406667 , -0.000566667 , 0.000103333 , -0.000336667}
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <math.h>
 
-Q4
-decrease
-Q5
-approach 1/6
+using namespace std;
+
+int main()
+{
+    int n=10;
+
+    double sum = 0.0;
+    double sum2 = 0.0;
+    double mean = 0.0;
+    double variance = 0.0;
+    double standard = 0.0;
+
+
+    int count6[6] = {0, 0, 0, 0, 0, 0} ;
+    int x;
+    int min = 1;
+    int max = 6;
+    srand( (unsigned)time(NULL) );
+
+
+    for(int i=1;i<=5;i++)
+    {
+        cout<<"number of trial = "<<n<<endl;
+        int count6[n] = {0};
+
+
+    for(int j=0;j<n;j++)
+    {
+
+        x = rand() % (max - min + 1) + min;
+        if (x==1)
+        {
+            count6[0]++;
+        }
+        if (x==2)
+        {
+            count6[1]++;
+        }
+        if (x==3)
+        {
+            count6[2]++;
+        }
+        if (x==4)
+        {
+            count6[3]++;
+        }
+        if (x==5)
+        {
+            count6[4]++;
+        }
+        if (x==6)
+        {
+            count6[5]++;
+        }
+
+    }
+
+
+
+
+    cout << "histogram = {" << count6 [0] <<" , "<< count6 [1]<<" , "<< count6 [2]<<" , "<< count6 [3]<<" , "<< count6 [4]<<" , "<< count6 [5]<<"}"<< endl;
+    cout << "frequency = {" << (double)count6 [0]/n <<" , "<< (double)count6 [1]/n<<" , "<< (double)count6 [2]/n<<" , "<< (double)count6 [3]/n<<" , "<< (double)count6 [4]/n<<" , "<< (double)count6 [5]/n<<"}"<< endl;
+    cout << "deviation = {" << (double)count6 [0]/n-1.0/6 <<" , "<< (double)count6 [1]/n-1.0/6<<" , "<< (double)count6 [2]/n-1.0/6<<" , "<< (double)count6 [3]/n-1.0/6<<" , "<< (double)count6 [4]/n-1.0/6<<" , "<< (double)count6 [5]/n-1.0/6<<"}"<< endl;
+
+    n=n*10;
+    }
+    return 0;
+}

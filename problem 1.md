@@ -58,4 +58,5 @@ variance = 6.69316  thr_variance = 6.66667  error = 0.0264932
 standard deviation = 2.58711  thr_standard_deviation = 2.58199  error = 0.0051253
 
 -------------------------------------------------------------------------------------
-approach is good. Error of standard deviation~1% when number of trial = 10000
+Q4
+Error of standard deviation~1% when number of trial = 10000~100000

@@ -1,4 +1,4 @@
-Q2
+Q1 Q2
 number of trial = 10
 histogram = {4 , 0 , 3 , 0 , 3 , 0}
 frequency = {0.4 , 0 , 0.3 , 0 , 0.3 , 0}
@@ -26,3 +26,4 @@ deviation = {-0.00131667 , 0.000183333 , 0.00132333 , 0.000733333 , 0.000653333 
 
 
 Q3
+decrease, see deviation
